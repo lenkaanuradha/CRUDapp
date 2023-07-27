@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}addandshow{% endblock title %}
+{% block content %}
+<div class="col-sm-8">
+<h4 class="alert alert-info ">Update StudentInformation</h4>
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {{updateform.as_p}}
+ <input type="submit" class="btn btn-success" value="Update">
+ <a href="{% url 'addshow' %}" class="btn btn-info">Back to Home</a>
+</form>
+</div>
+{% endblock content %}
